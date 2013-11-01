@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza2" >
+
+    <TextView
+        android:id="@+id/txtVotoNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtVotoPartido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/txtVotoNome"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/txtVoto"
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:text="Sim"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnElogieTwitter"
+        style="@style/btnNomal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnEmailVoto"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/txtVotoPartido"
+        android:layout_toRightOf="@+id/btnEmailVoto"
+        android:src="@drawable/ic_twitter_elogie" />
+
+    <ImageButton
+        android:id="@+id/btnEmailVoto"
+        style="@style/btnNomal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txtVotoPartido"
+        android:src="@drawable/ic_action_email" />
+
+    <ImageButton
+        android:id="@+id/btnReclameTwitter"
+        style="@style/btnNomal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnElogieTwitter"
+        android:layout_below="@id/txtVotoPartido"
+        android:layout_toRightOf="@id/btnElogieTwitter"
+        android:src="@drawable/ic_twitter_critique2" />
+
+</RelativeLayout>

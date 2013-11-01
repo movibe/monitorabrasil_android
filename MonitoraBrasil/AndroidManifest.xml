@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gamfig.monitorabrasil"
+    android:versionCode="11"
+    android:versionName="V1.7" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <permission
+        android:name="com.gamfig.monitorabrasil.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.gamfig.monitorabrasil.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.gamfig.monitorabrasil.view.ProcuraDeputado" />
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.ProcuraDeputado"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_procura_deputado"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
+            </intent-filter>
+
+            <!-- This intent-filter identifies this activity as "searchable" -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- This metadata entry provides further configuration details for searches -->
+            <!-- that are handled by this activity. -->
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.FichaDeputado"
+            android:label="@string/title_activity_ficha_deputado" >
+        </activity>
+        <activity android:name="com.gamfig.monitorabrasil.view.tabs.PresencaActivity" >
+        </activity>
+        <activity android:name="com.gamfig.monitorabrasil.view.tabs.ProjetosActivity" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.ProjetoDetalheActivity"
+            android:label="@string/title_activity_projeto_detalhe" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.tabs.TwitterActivity"
+            android:label="@string/title_activity_twitter" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.RankingActivity"
+            android:label="@string/title_activity_ranking"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.tabs.RankingFactoryActivity"
+            android:label="@string/title_activity_ranking_factory" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.ListaProjetosActivity"
+            android:label="@string/title_activity_lista_projetos"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.LoginRedesSociaisActivity"
+            android:label="@string/title_activity_login_redes_sociais" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.SobreActivity"
+            android:label="@string/title_activity_sobre"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.TwitterListaActivity"
+            android:label="@string/title_activity_twitter_lista"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.EmailActivity"
+            android:label="@string/title_activity_email"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.ComentarioActivity"
+            android:label="@string/title_activity_comentario"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.ListaProjetosActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.ListaProjetosActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.VotosActivity"
+            android:label="@string/title_activity_votos"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.ListaProjetosActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.ListaProjetosActivity" />
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.SignInActivity"
+            android:label="@string/title_activity_sign_in"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+>
+
+
+
+
+        </activity>
+
+        <receiver
+            android:name="com.gamfig.monitorabrasil.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.gamfig.monitorabrasil" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.gamfig.monitorabrasil.GCMIntentService" />
+
+        <activity
+            android:name="com.gamfig.monitorabrasil.ClientGCM"
+            android:label="@string/title_activity_client_gcm" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.tabs.DoacoesActivity"
+            android:label="@string/title_activity_doacoes" >
+        </activity>
+        <activity
+            android:name="com.gamfig.monitorabrasil.view.CotasActivity"
+            android:label="@string/title_activity_cotas"
+            android:parentActivityName="com.gamfig.monitorabrasil.view.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gamfig.monitorabrasil.view.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

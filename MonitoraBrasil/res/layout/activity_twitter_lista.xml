@@ -1,0 +1,74 @@
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".TwitterListaActivity" >
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/rlayout1"
+        android:divider="@color/bandeira_azul_claro"
+        android:dividerHeight="2px" >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/bandeira_azul_claro"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/btnEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_tweet" />
+
+        <ImageButton
+            android:id="@+id/btnReclameTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_action_refresh" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

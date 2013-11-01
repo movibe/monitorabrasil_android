@@ -1,0 +1,116 @@
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TwitterActivity" >
+
+    <!-- Twitter Lista -->
+
+    <RelativeLayout
+        android:id="@+id/layListaTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnTwitterT"
+            android:divider="@color/bandeira_azul_claro"
+            android:dividerHeight="2px" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnTwitterT"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="73dp"
+            android:layout_height="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_action_tweet"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layFormularioTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtDataUltDespacho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:text="Caso saiba o twitter do Deputado, informe logo abaixo:"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtPropostaVotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_below="@id/btnRanking"
+            android:layout_marginTop="20dp"
+            android:text="Ou envie um email para o Deputado solicitando que ele crie uma conta no twitter"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/txtComentario"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDataUltDespacho"
+            android:layout_weight="1"
+            android:ems="10"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnDeputados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPropostaVotos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Enviar email"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnRanking"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_below="@id/txtDataUltDespacho"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/txtComentario"
+            android:layout_weight="1"
+            android:text="Enviar"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</merge>

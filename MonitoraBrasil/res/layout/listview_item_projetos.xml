@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzafundo" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/txtPropostaTitulo"
+            style="@style/textoBranco"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPropostaAutor"
+            style="@style/textoBranco"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtPropostaTitulo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txtPropostaEmenta"
+            style="@style/textoBranco"
+            android:layout_alignLeft="@+id/txtPropostaAutor"
+            android:layout_below="@+id/txtPropostaAutor"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtPropostaAutor"
+            android:layout_toRightOf="@+id/txtPropostaAutor"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_action_email" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/txtPropostaTitulo"
+            android:layout_below="@id/txtPropostaTitulo"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cinzafundo" />
+
+        <RelativeLayout
+            android:id="@+id/rlBotoes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlVotos"
+            android:background="@color/cinza2" >
+
+            <Button
+                android:id="@+id/btnDeputados"
+                style="@style/btnVoto"
+                android:layout_marginLeft="10dp"
+                android:text="Sim "
+                android:textColor="@color/dark_green" />
+
+            <Button
+                android:id="@+id/btnRanking"
+                style="@style/btnVoto"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/btnDeputados"
+                android:text="Não"
+                android:textColor="@color/dark_red" />
+
+            <Button
+                android:id="@+id/btnComentar"
+                style="@style/btnVoto"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/btnRanking"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Comente"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imgComentar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnComentar"
+                android:layout_alignTop="@+id/btnComentar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_action_comment"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlVotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPropostaEmenta"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/txtPropostaSim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtVotos"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/txtComentNome"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/txtPropostaVotos"
+                style="@style/textoBranco"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/txtVotos"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtVotoPartido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtVotos"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/txtPropostaSim"
+                android:text="Não:" />
+
+            <TextView
+                android:id="@+id/txtPropostaNao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtVotos"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/txtVotoPartido"
+                android:text="00" />
+
+            <TextView
+                android:id="@+id/txtComentNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtVotos"
+                android:text="Sim:" />
+
+            <TextView
+                android:id="@+id/txtVotos"
+                style="@style/textoBranco"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Votos"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtPropostaVotado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/txtPropostaTitulo"
+            android:layout_marginRight="20dp"
+            android:text="Votado"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/dark_red"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/dtProposicao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/view1"
+            android:layout_alignLeft="@+id/txtPropostaTitulo"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <RelativeLayout
+            android:id="@+id/rlComentario"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rlBotoes" >
+
+            <com.facebook.widget.ProfilePictureView
+                android:id="@+id/fotoFaceComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" >
+
+            </com.facebook.widget.ProfilePictureView>
+
+            <TextView
+                android:id="@+id/txtUserComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNomeComentario"
+                android:layout_toRightOf="@+id/fotoFaceComentario"
+                android:text="Comentário" />
+
+            <TextView
+                android:id="@+id/txtNomeComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtUserComentario"
+                android:layout_alignTop="@+id/fotoFaceComentario"
+                android:text="Nome"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgVotado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_action_right"
+        android:visibility="invisible" />
+
+</RelativeLayout>

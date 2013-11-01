@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<resources>
+
+    <string name="app_name">Monitora, Brasil!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_id">id_facebook coloque o seu</string>
+    <string name="title_activity_procura_deputado">Procura Deputado</string>
+    <string name="title_activity_ficha_deputado">Ficha Deputado</string>
+    <string name="gabinete">Gabinete:</string>
+    <string name="anexo">Anexo:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_presenca">PresencaActivity</string>
+    <string name="title_activity_projetos">ProjetosActivity</string>
+    <string name="presenca">Presença</string>
+    <string name="ausencia_justificada">Ausências Justificadas</string>
+    <string name="ausencia_nao_justificada">Ausências não Justificadas</string>
+    <string name="ano">Ano</string>
+    <string name="title_activity_projeto_detalhe">Detalhe da Proposição</string>
+    <string name="situacao">Situação:</string>
+    <string name="ementa">Ementa:</string>
+    <string name="ultimodespacho">Último Despacho:</string>
+    <string name="link_inteiro_teor">Link Inteiro Teor:</string>
+    <string name="title_activity_twitter">TwitterActivity</string>
+    <string name="title_activity_ranking">Ranking</string>
+    <string name="title_activity_ranking_factory">RankingFactoryActivity</string>
+    <string name="title_activity_ranking_assiduidade">RankingAssiduidadeActivity</string>
+    <string name="description_star">Favoritos</string>
+    <string name="id_key_favoritos">Favoritos</string>
+    <string name="id_key_idcadastro">idCadastro</string>
+    <string name="id_key_projetos_favoritos">idProjFav</string>
+    <string name="id_key_avaliacao_politicos">idAvaliacaoPoliticos</string>
+    <string name="id_key_avaliacao_projetos">idAvaliacaoProjetos</string>
+    <string name="id_key_dtAtualizacao">idDtAtualizacao</string>
+    <string name="id_key_jsonpoliticos">jsonpoliticos</string>
+    <string name="id_key_preferencias">pref</string>
+    <string name="id_key_votos">votos</string>
+    <string name="title_activity_lista_projetos">Vote nos Projetos</string>
+    <string name="menu_search">Procura</string>
+    <string name="avalie">Avalie</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancelar</string>
+    <string name="fale">Fale Conosco</string>
+    <string name="ok">Ok</string>
+    <string name="e_necessario_logar">"É necessário logar!"</string>
+    <string name="total">Total</string>
+    <string name="title_activity_login_redes_sociais">Login</string>
+    <string name="sobre">Sobre</string>
+    <string name="title_activity_sobre">Monitora Brasil</string>
+    <string name="title_activity_twitter_lista">O que eles estão falando</string>
+    <string name="title_activity_email">Enviar Email para Deputados</string>
+    <string name="title_activity_comentario">Comentários</string>
+    <string name="title_activity_votos">Votos</string>
+    <string name="title_activity_sign_in">Login</string>
+    <string name="default_status">Olá visitante, escolha uma forma de fazer login</string>
+    <string name="greeting_status">Bem vindo, %s.</string>
+    <string name="greeting_status_sign_in_required">É preciso logar</string>
+    <string name="greeting_status_error">Erro no login: %s.</string>
+    <string name="loading_status">Carregando…</string>
+    <string name="signing_in_status">Faça o login com Google+.</string>
+    <string name="signed_in_status">Signed in as \"%s\".</string>
+    <string name="revoke_access_button_name">Revogue o acesso</string>
+    <string name="sign_out_button_name">Sair</string>
+    <string name="plus_generic_error">Login com o Google+ não está disponível.</string>
+    <string name="progress_message">Signing in to Google&#8230;</string>
+    <string name="revoke_access_status">Acesso revogado.</string>
+    <string name="revoke_access_error_status">Não foi possível revogar o acesso.</string>
+    <string name="unknown_person">Desconhecido</string>
+    <string name="signed_out_status">Saiu.</string>
+    <string name="title_activity_client_gcm">ClientGCM</string>
+    <string name="title_activity_doacoes">DoacoesActivity</string>
+    <string name="id_key_conta">idConta</string>
+    <string name="nome_conta">nomeConta</string>
+    <string name="tipo_conta">tipoConta</string>
+    <string name="enviar_email_grupos">Enviar Emails para Grupos</string>
+    <string name="title_activity_cotas">Cotas Parlamentares</string>
+    <string name="compartilhe">Compartilhe</string>
+
+</resources>

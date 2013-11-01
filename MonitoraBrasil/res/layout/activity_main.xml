@@ -1,0 +1,144 @@
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fundoApp"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity" >
+
+        <ImageView
+            android:id="@+id/imgComentar"
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="false"
+            android:src="@drawable/topo" />
+
+        <com.facebook.widget.ProfilePictureView
+            android:id="@+id/profilepic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+        </com.facebook.widget.ProfilePictureView>
+
+        <TextView
+            android:id="@+id/txtAutor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profilepic2"
+            android:layout_below="@+id/profilepic2"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:layout_alignTop="@+id/loginFacebook"
+            android:onClick="loginGPlus"
+            android:text="Login G+" />
+
+        <com.facebook.widget.LoginButton
+            android:id="@+id/loginFacebook"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnDepMonitorados"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:id="@+id/lblVersionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btnVoltar" />
+
+        <Button
+            android:id="@+id/btnDepMonitorados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnDeputados"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@+id/btnRanking"
+            android:background="@drawable/id_dep_fav"
+            android:minHeight="96dip"
+            android:minWidth="96dip"
+            android:onClick="abrirDeputadosFavoritos"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnTwitterT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnDepMonitorados"
+            android:layout_alignBottom="@+id/btnDepMonitorados"
+            android:layout_alignRight="@+id/btnVoltar"
+            android:background="@drawable/twitter_talk_"
+            android:onClick="abreTwitterLista" />
+
+        <Button
+            android:id="@+id/btnRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnTwitterT"
+            android:layout_alignLeft="@+id/btnVoteProjetos"
+            android:background="@drawable/ic_rank"
+            android:minHeight="96dip"
+            android:minWidth="96dip"
+            android:onClick="abrirRanking"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnDeputados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/btnTwitterT"
+            android:layout_below="@+id/txtAutor2"
+            android:background="@drawable/ic_dep"
+            android:minHeight="96dip"
+            android:minWidth="96dip"
+            android:onClick="abrirDeputados"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnCotas"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnVoteProjetos"
+            android:layout_alignBottom="@+id/btnVoteProjetos"
+            android:layout_alignLeft="@+id/btnDepMonitorados"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/cota"
+            android:onClick="abreCota" />
+
+        <Button
+            android:id="@+id/btnVoteProjetos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgComentar"
+            android:layout_toLeftOf="@+id/txtAutor2"
+            android:background="@drawable/ic_vote"
+            android:minHeight="96dip"
+            android:minWidth="96dip"
+            android:onClick="abrirProjetosFavoritos" />
+
+    </RelativeLayout>

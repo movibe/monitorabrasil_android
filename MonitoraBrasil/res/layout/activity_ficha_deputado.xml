@@ -1,0 +1,218 @@
+<!--
+  Copyright  2013 de Geraldo Augusto de Morais Figueiredo
+  Este arquivo é parte do programa Monitora, Brasil!. O Monitora, Brasil! é um software livre.
+  Você pode redistribuí-lo e/ou modificá-lo dentro dos termos da GNU Affero General Public License 
+  como publicada pela Fundação do Software Livre (FSF); na versão 3 da Licença. 
+  Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA,
+  sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. 
+  Veja a licença para maiores detalhes. 
+  Você deve ter recebido uma cópia da GNU Affero General Public License, sob o título "LICENSE.txt", 
+  junto com este programa, se não, acesse http://www.gnu.org/licenses/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".FichaDeputado" >
+    
+    <RelativeLayout
+        android:id="@+id/layTopo1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@color/white"
+        android:gravity="right" >
+
+        <ImageView
+            android:id="@+id/imgTwitter"
+            android:layout_width="86dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+        <TextView
+            android:id="@+id/txtNomePerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgTwitter"
+            android:layout_weight="2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPartidoPerfil"
+            style="@style/textoMenor"
+            android:layout_alignParentTop="false"
+            android:layout_below="@id/txtNomePerfil"
+            android:layout_toRightOf="@id/imgTwitter" />
+
+        <TextView
+            android:id="@+id/txtEmailPerfil"
+            style="@style/textoMenor"
+            android:layout_below="@id/txtPartidoPerfil"
+            android:layout_toRightOf="@id/imgTwitter" />
+
+        <TextView
+            android:id="@+id/txtTelefonePerfil"
+            style="@style/textoMenor"
+            android:layout_below="@+id/teste"
+            android:layout_toRightOf="@+id/txtPropostaTitulo" />
+
+        <TextView
+            android:id="@+id/teste"
+            style="@style/textoMenor"
+            android:layout_below="@id/txtEmailPerfil"
+            android:layout_toRightOf="@id/imgTwitter"
+            android:text="@string/gabinete" />
+
+        <TextView
+            android:id="@+id/txtGabinetePerfil"
+            style="@style/textoMenor"
+            android:layout_below="@id/txtEmailPerfil"
+            android:layout_toRightOf="@id/teste" />
+
+        <TextView
+            android:id="@+id/txtEmenta"
+            style="@style/textoMenor"
+            android:layout_below="@id/txtEmailPerfil"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/txtGabinetePerfil"
+            android:text="@string/anexo" />
+
+        <TextView
+            android:id="@+id/txtAnexoPerfil"
+            style="@style/textoMenor"
+            android:layout_below="@id/txtEmailPerfil"
+            android:layout_toRightOf="@id/txtEmenta" />
+
+        <CheckBox
+            android:id="@+id/star"
+            style="?android:attr/starStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/description_star"
+            android:onClick="favIconClick"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtPropostaTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtTelefonePerfil"
+            android:layout_alignBottom="@+id/txtTelefonePerfil"
+            android:layout_toRightOf="@id/imgTwitter"
+            android:text="Tel.:" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layTopo2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/layTopo1"
+        android:background="@color/black" >
+
+        <TextView
+            android:id="@+id/txtAno1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="@string/avalie"
+            android:textColor="@color/white" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtAno1" />
+
+        <TextView
+            android:id="@+id/txtRatingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ratingBar1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/bandeira_amarelo_claro"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnDeputados"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/layTopo2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_action_collapse"
+        android:onClick="mudaTopo"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnDeputados" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:background="#696969" >
+                </TabWidget>
+            </ScrollView>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <FrameLayout
+                    android:id="@+id/realtabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
